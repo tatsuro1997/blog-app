@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  helper_method :guest_user, :logged_in?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
@@ -10,6 +11,10 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def logged_in?
+    !!session[:user_id]
+  end
 
   # 入力フォームからアカウント名情報をDBに保存するために追加
   def configure_permitted_parameters
