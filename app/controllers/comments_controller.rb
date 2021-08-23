@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :guest_log_in, only: %i[ create destroy]
+
    def create
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.create(comment_params)
@@ -13,7 +15,12 @@ class CommentsController < ApplicationController
   end
 
   private
-  def comment_params
-    params.require(:comment).permit(:body, :commenter)
-  end
+
+    def guest_log_in
+      redirect_to root_path if current_user.email == 'guest@example.com'
+    end
+
+    def comment_params
+      params.require(:comment).permit(:body, :commenter)
+    end
 end
