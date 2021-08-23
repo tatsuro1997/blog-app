@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  def guest_user
+    current_user == User.find_by(email: 'guest@example.com')
+  end
+
   protected
 
   # 入力フォームからアカウント名情報をDBに保存するために追加
