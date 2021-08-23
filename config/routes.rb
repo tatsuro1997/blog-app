@@ -11,6 +11,7 @@ devise_scope :user do
   get "signup", :to => "users/registrations#new"
   get "login", :to => "users/sessions#new"
   get "logout", :to => "users/sessions#destroy"
+  post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
 end
 
   resources :blogs do
