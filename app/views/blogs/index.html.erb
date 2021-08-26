@@ -8,8 +8,6 @@
     <tr>
       <th>Title</th>
       <th>Content</th>
-      <th>User name</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -17,11 +15,13 @@
     <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.content %></td>
-        <td><%= blog.user_name %></td>
-        <td><%= blog.user_id %></td>
-        <% if guest_user %>
+        <td><%= link_to blog.title, blog %></td>
+        <% if blog.images[0] %>
+          <td><%= image_tag blog.images[0].image_url.url, class: 'image-size' %></td>
+        <% end %>
+        <%
+=begin%>
+ <% if guest_user %>
           <td><%= link_to 'Show', blog %></td>
         <% else %>
           <td><%= link_to 'Show', blog %></td>
@@ -38,6 +38,8 @@
             <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
           </td>
         <% end %>
+<%
+=end%>
       </tr>
     <% end %>
     </tbody>
