@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="card-text">
-        <%= @blog.body %>
+        <%= @blog.content %>
       </div>
       <%
 =begin%>
@@ -39,7 +39,7 @@
     <h3>コメント</h3>
     <% @blog.comments.each do |comment| %>
       <p>
-        <%= comment.commenter %>: <%= comment.body %>
+        <%= comment.commenter %>: <%= comment %>
         <% unless guest_user%>
           <%= link_to '削除', [comment.blog, comment],
                     :confirm => 'よろしいですか？',
