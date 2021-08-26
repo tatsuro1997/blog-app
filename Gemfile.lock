@@ -235,6 +235,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   carrierwave
   devise
+  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick
@@ -255,4 +256,4 @@ RUBY VERSION
    ruby 2.6.7p197
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
