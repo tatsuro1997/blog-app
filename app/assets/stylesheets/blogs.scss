@@ -1,4 +1,37 @@
-.image-size{
-  width: auto;
-  height: 200px;
+.content-wrapper{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  .content-main{
+    width: 75%;
+    .content-blogs{
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      .content-blog{
+        width: 250px;
+        height: 250px;
+        margin-left: 5%;
+        .blog-top-image{
+          .image-size{
+            width: 250px;
+            height: 200px;
+          }
+        }
+      }
+      .blog-bottom{
+        .created-at{
+          font-size: 10px;
+        }
+        .blog-title{
+          height: 30px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .content-side{
+    width:25%
+  }
 }
