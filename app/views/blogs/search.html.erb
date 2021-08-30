@@ -1,0 +1,37 @@
+<div class="content-wrapper">
+  <div class="content-main">
+    <div class="content-head">
+      <div class="tag_name">
+        <%= "#{@tag.tag_name}の投稿一覧" %>
+      </div>
+      <div class="tag_names">
+        <% @tag_list.each do |list| %>
+          <%= link_to list.tag_name, tag_blogs_path(tag_id: list.id) %>
+          <%= "(#{@tag.blogs.count})" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="content-blogs">
+      <% @blogs.each do |blog| %>
+        <div class="content-blog">
+          <div class="blog-top-image">
+            <% if blog.images[0] %>
+              <%= link_to blog do %>
+                <%= image_tag blog.images[0].image_url.url, class: 'image-size' %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="blog-bottom">
+            <div class="created-at">
+              <i class="far fa-clock"></i>
+              <%= blog.created_at.strftime('%Y-%m-%d') %>
+            </div>
+            <div class="blog-title">
+              <%= blog.title %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

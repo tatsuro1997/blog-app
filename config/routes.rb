@@ -17,4 +17,8 @@ end
   resources :blogs do
     resources :comments
   end
+
+  resources :tags do
+    get 'blogs', to: 'blogs#search'
+  end
 end

@@ -25,6 +25,11 @@
     <%= f.rich_text_area :content %>
   </div>
 
+  <div class='field'>
+    <%= f.label :tag_name %>
+    <%= f.text_field :tag_name %>
+  </div>
+
   <div class="actions mt-3">
     <%= f.submit "保存する", class: 'btn btn-block btn-success btn-sm' %>
   </div>

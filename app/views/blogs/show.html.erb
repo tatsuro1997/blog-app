@@ -18,15 +18,13 @@
       <div class="card-text">
         <%= @blog.content %>
       </div>
-      <%
-=begin%>
- <div class="card-image">
-        <% @blog.images.each do |image| %>
-          <%= image_tag image.image_url.url %>
+      <div class="blog-tags">
+        <%= "タグ：" %>
+        <% @blog_tags.each do |tag| %>
+          <%= link_to tag.tag_name, tag_blogs_path(tag_id: tag.id) %>
+          <%= "(#{tag.blogs.count})" %>
         <% end %>
       </div>
-<%
-=end%>
     </div>
    </div>
 
@@ -64,6 +62,4 @@
       </div>
     <% end %>
   <% end %>
-
-
 </div>
