@@ -6,7 +6,7 @@
   <div class="content-wrapper">
     <div class="content-main">
       <div class="content-blogs">
-        <% @blogs.each do |blog| %>
+        <% @blogs.sort.reverse.each do |blog| %>
           <div class="content-blog">
             <div class="blog-top-image">
               <% if blog.images[0] %>
