@@ -4,7 +4,7 @@
   <hr>
 
   <div class="content-wrapper">
-    <div class="content-main">
+    <div class="content-main margin-left">
       <div class="content-blogs">
         <% @blogs.sort.reverse.each do |blog| %>
           <div class="content-blog">
@@ -29,13 +29,15 @@
       </div>
     </div>
     <div class="content-side">
-      <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
-      <div class="tag-list">
-        <h3>タグリスト</h3>
-        <% @tag_list.each do |list| %>
-          <%= link_to list.tag_name, tag_blogs_path(tag_id: list.id) %>
-          <%= "(#{list.blogs.count})" %>
-        <% end %>
+      <div class="content-sidebar">
+        <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
+        <div class="tag-list">
+          <h3>タグリスト</h3>
+          <% @tag_list.each do |list| %>
+            <%= link_to list.tag_name, tag_blogs_path(tag_id: list.id) %>
+            <%= "(#{list.blogs.count})" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

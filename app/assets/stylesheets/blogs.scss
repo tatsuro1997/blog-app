@@ -1,41 +1,61 @@
-.content-wrapper{
-  width: 100%;
-  display: flex;
-  .content-main{
-    width: 75%;
-    .content-blogs{
-      width: 100%;
-      flex-wrap: wrap;
-      display: flex;
-      .content-blog{
-        width: 250px;
-        height: 250px;
-        margin-left: 5%;
-        .blog-top-image{
-          .image-size{
-            width: 250px;
-            height: 200px;
+.container{
+  width: 1140px;
+  margin: 0 auto;
+  .content-wrapper{
+    width: 50%;
+    display: flex;
+    // margin: 0 auto;
+    .content-main{
+      .content-blogs{
+        width: 500px;
+        flex-wrap: wrap;
+        display: flex;
+        margin-right: 30px;
+        .content-blog{
+          width: 750px;
+          height: auto;
+          .blog-top-image{
+            .image-size{
+              width: 500px;
+              height: auto;
+            }
+          }
+        }
+        .blog-bottom{
+          .created-at{
+            font-size: 10px;
+          }
+          .blog-title{
+            height: 30px;
+            margin-bottom: 20px;
+            text-align: center;
           }
         }
       }
-      .blog-bottom{
-        .created-at{
-          font-size: 10px;
-        }
-        .blog-title{
-          height: 30px;
-          margin-bottom: 20px;
-          text-align: center;
-        }
+    }
+    .content-side{
+      .content-sidebar{
+        width: 200px;
       }
     }
   }
-  .content-side{
-    width:25%
+
+  .top-image-size{
+    width: 500px;
+    height: auto;
   }
 }
 
-.top-image-size{
-  width: 500px;
-  height: auto;
+@media screen and (min-width: 1024px) {
+	/* 1024px以上に適用されるCSS（PC用） */
+  .margin-left{
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+	/* 425px以下に適用されるCSS（スマホ） */
+  .margin-left{
+    margin-left: 30%;
+  }
 }
