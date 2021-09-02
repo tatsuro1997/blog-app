@@ -16,3 +16,10 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@media screen and (min-width: 768px) {
+	/* 960px以上に適用されるCSS（PC用） */
+  .nav-width{
+  // width: 100%;
+  }
+}
