@@ -17,6 +17,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+.nav-item{
+  a{
+    color: #4d4d4d!important;
+  }
+}
+
 @media screen and (min-width: 768px) {
 	/* 960px以上に適用されるCSS（PC用） */
   .nav-width{
