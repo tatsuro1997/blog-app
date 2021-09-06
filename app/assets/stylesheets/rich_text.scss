@@ -1,0 +1,29 @@
+.first-view-image{
+  img{
+    display: none;
+  }
+}
+
+.card-image{
+  img{
+    height: 350px!important;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.card-body{
+  padding: 50px 20% 5px;
+}
+.attachment{
+  img{
+    height: 300px;
+    object-fit: cover;
+  }
+}
+.attachment__caption{
+  display: none;
+}
+.blog-tags{
+  margin-top: 50px;
+}
