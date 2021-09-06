@@ -17,15 +17,65 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 .nav-item{
   a{
     color: #4d4d4d!important;
   }
 }
 
-@media screen and (min-width: 768px) {
-	/* 960px以上に適用されるCSS（PC用） */
-  .nav-width{
-  // width: 100%;
+.first-view-wrapper{
+  width: 1140px;
+  margin-top: 15px!important;
+  margin: 0 auto;
+  .first-view{
+    width: 1024px;
+    .first-view-image{
+      text-align: center;
+      img{
+        height: 300px;
+        width: 1024px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+	/* 768px以下に適用されるCSS（PC用） */
+  .first-view-wrapper{
+      width: 768px;
+
+    .first-view{
+      width: 700px;
+      .first-view-image{
+        text-align: center;
+        img{
+          height: 300px;
+          width: 700px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+	/* 425px以下に適用されるCSS（スマホ） */
+  .first-view-wrapper{
+      width: 400px;
+
+    .first-view{
+      width: 380px;
+      .first-view-image{
+        text-align: center;
+        img{
+          height: 250px;
+          width: 380px;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
