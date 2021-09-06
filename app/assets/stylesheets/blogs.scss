@@ -87,7 +87,43 @@
 
 @media screen and (max-width: 425px) {
 	/* 425px以下に適用されるCSS（スマホ） */
-  .margin-left{
-    margin-left: 30%;
+  .container{
+    width: 380px;
+    text-align: center;
+    margin: 0 auto;
+    .content-wrapper{
+      width: 100%;
+      .content-main{
+        .content-blogs{
+          width: 100%;
+          flex-wrap: wrap;
+          display: flex;
+          margin-right: 30px;
+          .content-blog{
+            width: 100%;
+            height: auto;
+            .blog-top-image{
+              .image-size{
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          .blog-bottom{
+            .created-at{
+              font-size: 10px;
+            }
+            .blog-title{
+              height: 30px;
+              margin-bottom: 20px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-side{
+    display: none;
   }
 }
