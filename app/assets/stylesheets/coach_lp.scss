@@ -1,0 +1,580 @@
+body{
+  margin: 0px!important;
+}
+
+/* KV */
+.kv-wrapper{
+  display: flex;
+  .kv-text-wrapper{
+    background-color: #1E73BD;
+    width: 100%;
+    .kv-text{
+      color: white;
+      margin-top: 100px;
+      .kv-copy-top{
+        font-size: 2.4rem;
+        font-weight: bold;
+        color:#1a1a1a;
+        max-width: 300px;
+        padding: 5px 0;
+        margin: 0 auto;
+      }
+      .bg{
+        background-color: white;
+        border-radius: 15px;
+      }
+      .kv-copy-main{
+        font-size: 8rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-top: 20px;
+      }
+      .kv-copy-bottom{
+        font-size: 2.4rem;
+        margin-top: 20px;
+        line-height: 3rem;
+        .un-li{
+          background: linear-gradient(transparent 10%, #1a1a1a 20%);
+        }
+      }
+    }
+  }
+  .kv-img{
+    width: 100%;
+    position: relative;
+    .top-image {
+      background-color: #1E73BD;
+      width: 100%;
+      height: 630px;
+      object-fit: cover;
+    }
+    /* スライドイン */
+    /* CSSアニメーションの指定 */
+    .Headline{
+      animation: SlideIn 10s infinite;
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+      font-size: 8rem;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-top: 20px;
+      color: #ddd;
+    }
+  }
+}
+
+/* CSSアニメーションの設定 */
+@keyframes SlideIn {
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* message  */
+.message-wrapper{
+  margin-top: 100px;
+  .message-inner{
+    .message-top{
+      font-size: 3.6rem;
+      font-weight: bold;
+      position: relative;
+    }
+    .message-top:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      display: inline-block;
+      width: 80px;
+      height: 2px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: black;
+      border-radius: 2px;
+    }
+    .message-list{
+      width: 980px;
+      display: flex;
+      margin: 0 auto;
+      margin-top: 50px;
+      justify-content: center;
+      .message-list li{
+        display: inline-block;
+      }
+      .message-item{
+        width: 30%;
+        height: 300px;
+        text-align: center;
+        .message-img-wrapper{
+          margin: 0 auto;
+          img{
+            width: 30%;
+            height: 200px;
+          }
+        }
+      }
+    }
+    .message-bottom{
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+/* -- LINEの文言 -- */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+  .top {
+    width: 100%;
+    .top-sentences {
+      background-color: #1E73BD;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 20px;
+      position: relative;
+      margin-bottom: 100px;
+      .top-sentence_top{
+        margin-top: 30px;
+        font-size: 3.5rem;
+      }
+      .sentence-margin-bottom {
+        margin-bottom: 40px;
+      }
+      .top-sentence_bottom{
+        font-size: 2rem;
+        line-height: 2rem;
+        .font-green {
+          color: #00b900;
+        }
+      }
+    }
+    .top-sentences:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 60px 50vw 0 50vw;
+      border-color: #1E73BD transparent transparent transparent;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+    .line {
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 80px;
+      .line-sentences {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        .diagonal-left {
+          width: 15%;
+          height: 150px;
+          background: linear-gradient(45deg, transparent, transparent 49%, black 49%, black 51%, transparent 51%, transparent);
+        }
+        .line-sentence {
+          text-align: center;
+          /* margin: 0 auto; */
+          .sub-line-sentence {
+            font-size: 2.4rem;
+            font-weight: bold;
+          }
+          .main-line-sentence {
+            font-size: 3.4rem;
+            color: #ED0A0A;
+            font-weight: bold;
+            margin-top: 30px;
+            line-height: 3.4rem;
+          }
+        }
+        .diagonal-right {
+          width: 15%;
+          height: 150px;
+          background: linear-gradient(135deg, transparent, transparent 49%, black 49%, black 51%, transparent 51%, transparent);
+        }
+      }
+    }
+  }
+  /* 自己紹介 */
+  .profile {
+    width: 80%;
+    margin: 0 auto;
+    .profile-title {
+      width: 100%;
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 70px 0 30px;
+    }
+    .profile-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .profile-image {
+        width: 40%;
+        height: 40%;
+      }
+      .profile-text {
+        width: 35%;
+        background-color: #DAE6FF;
+        padding: 30px;
+        .profile-text-size{
+          font-size: 1.5rem;
+        }
+        a{
+          border-bottom: 2px solid #1a1a1a;
+        }
+      }
+    }
+    /* snsアイコン */
+    .sns {
+      width: 80%;
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /* 体験者の声 */
+  .experiencer{
+    width: 80%;
+    margin: 0 auto;
+    .experiencer-title
+    {
+      width: 100%;
+      font-size: 3.6rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 70px 0 30px;
+    }
+    .experiencer-contents {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      .experiencer-content {
+        width: 45%;
+        .experiencer-content-text{
+          padding: 30px;
+          background-color: #DAE6FF;
+          height: auto;
+        }
+      }
+    }
+    .experiencer-contents:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+  /* もっと自分らしく生きたいあなたへ */
+  /* 自己開示 */
+  .reason-wrapper,
+  .myself-wrapper{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .reason-inner,
+  .myself-inner{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .reason-title,
+  .myself-title{
+    width: 100%;
+    font-size: 3.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 70px auto 30px;
+  }
+  .reason-text,
+  .myself-text{
+    padding: 60px;
+    padding-bottom: 0;
+    background-color: #DAE6FF;
+  }
+}
+
+// アイコン
+.sns-icon {
+  margin: 0 15px;
+}
+.fa-facebook-square {
+  color: #305097;
+}
+.fa-twitter {
+  color: #00aced;
+}
+.fa-instagram {
+  color: #D7337D;
+}
+.fa-youtube {
+  color: #ED0A0A;
+}
+.youtube{
+  display: none;
+}
+
+/* フッター */
+.footer {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #ddd;
+  background-color: #1E73BD;
+  margin-top: 70px;
+  font-size: 1.2rem;
+  padding: 18px 0;
+  color: white;
+}
+
+// LINEボタン
+.line-button {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #00b900;
+  border-radius: 30px;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: solid 4px #627295;
+  position: relative;
+  z-index: 1; /* 必要であればリンク要素の重なりのベース順序指定 */
+  a{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-indent:-999px;
+    z-index: 2;
+  }
+  .line-link {
+    margin: 0 auto;
+    line-height: 70px;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+.line-button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+.line-button:last-of-type{
+  margin-bottom: 30px;
+}
+
+
+/* -------------- */
+/* 小画面PC */
+/* -------------- */
+
+@media screen and (max-width:1024px){
+
+  @media screen and (min-width: 1024px){
+    .br-pc { display:block; }
+    .br-sp { display:none; }
+  }
+  @media screen and (max-width: 1024px){
+    .br-pc { display:none; }
+    .br-sp { display:block; }
+  }
+
+  /* kv  */
+  .kv-copy-bottom{
+    font-size: 2rem!important;
+  }
+  .Headline{
+    font-size: 6.5rem!important;
+    margin-bottom: 50px;
+  }
+
+  /* message  */
+
+  /* line  */
+  .main-line-sentence {
+    font-size: 2.4rem!important;
+    line-height: 2.4rem!important;
+  }
+
+  /* 自己紹介 */
+
+  /* 体験者の声 */
+
+  /* 自己開示 */
+  .myself-text{
+    padding: 30px!important;
+  }
+}
+
+
+/* -------------- */
+/* タブレット */
+/* -------------- */
+@media screen and (max-width:920px){
+  .kv-text{
+    margin-top: 50px!important;
+  }
+  .Headline{
+    font-size: 4.5rem!important;
+  }
+
+  /* message  */
+  .message-list{
+    width: 90%!important;
+  }
+  .message-img-wrapper img{
+    width: 50%!important;
+  }
+
+  /* line  */
+  .main-line-sentence {
+    font-size: 1.8rem!important;
+    line-height: 1.8rem!important;
+  }
+
+  /* 自己紹介  */
+  .profile-title{
+    font-size: 2.4rem!important;
+  }
+  .profile-text{
+    width: 50%!important;
+  }
+
+  /* 体験者の声 */
+  .experiencer-title{
+    font-size: 2.4rem!important;
+  }
+
+  /* 自己開示 */
+  .reason-title{
+    font-size: 2.4rem!important;
+  }
+  .myself-title{
+    font-size: 2.4rem!important;
+  }
+}
+
+
+/* -------------- */
+/* スマホ */
+/* -------------- */
+
+@media screen and (max-width:425px){
+
+  @media screen and (min-width: 414px){
+    .br-pc { display:block; }
+    .br-sp { display:none; }
+  }
+  @media screen and (max-width: 414px){
+    .br-pc { display:none; }
+    .br-sp { display:block; }
+  }
+  .flex-rc{
+    flex-direction: column;
+  }
+
+
+  /* kv  */
+  .kv-copy-main{
+    font-size: 6rem!important;
+  }
+  .kv-copy-bottom{
+    font-size: 1.8rem!important;
+    line-height: 2.5rem!important;
+    margin-bottom: 30px;
+  }
+  .kv-img{
+    display: none;
+  }
+  .Headline{
+    font-size: 2.5rem;
+  }
+
+
+  /* message  */
+  .message-top{
+    font-size: 2.5rem!important;
+  }
+  .message-img-wrapper img{
+    width: 70%!important;
+    object-fit: cover;
+  }
+  .message-bottom{
+    font-size: 2rem!important;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+  /* line  */
+  .top-sentence_top{
+    font-size: 2rem!important;
+    margin-top: 0px!important;
+    margin-bottom: 20px!important;
+  }
+  .top-sentence_bottom{
+    font-size: 1.2rem!important;
+    margin-bottom: 0px!important;
+  }
+  .sub-line-sentence{
+    font-size: 1.5rem!important;
+  }
+  .main-line-sentence {
+    font-size: 1.3rem!important;
+    line-height: 1.5rem!important;
+  }
+  .line-button{
+    margin-top: 0!important;
+  }
+  .line-link{
+    font-size: 1.2rem!important;
+  }
+
+
+  /* 自己紹介 */
+  .profile-image{
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .profile-text{
+    width: 80%!important;
+    margin: 0 auto;
+  }
+  .profile-text-size{
+    font-size: 1.2rem!important;
+  }
+
+
+  /* 体験者の声 */
+  .experiencer-content{
+    width: 100%!important;
+  }
+
+
+  /* 自己開示 */
+  .reason-inner,
+  .myself-inner{
+    width: 100%!important;
+  }
+  .reason-title,
+  .myself-title{
+    width: 60%!important;
+  }
+  .myself-content{
+    margin-bottom: 50px;
+  }
+}
