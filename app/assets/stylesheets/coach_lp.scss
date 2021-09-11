@@ -475,11 +475,11 @@ body{
 
 @media screen and (max-width:425px){
 
-  @media screen and (min-width: 414px){
+  @media screen and (min-width: 425px){
     .br-pc { display:block; }
     .br-sp { display:none; }
   }
-  @media screen and (max-width: 414px){
+  @media screen and (max-width: 425px){
     .br-pc { display:none; }
     .br-sp { display:block; }
   }

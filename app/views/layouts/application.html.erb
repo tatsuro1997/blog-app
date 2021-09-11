@@ -9,7 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%
+=begin%>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%
+=end%>
+
+    <%= stylesheet_link_tag 'blogs' %>
+    <%= stylesheet_link_tag 'rich_text' %>
+    <%= stylesheet_link_tag 'scaffolds' %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -41,8 +50,12 @@
             <a class="dropdown-item" href="https://line.me/R/ti/p/%40652ivsas" target="_blank" rel="noopener">LINEお友達になる</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#"><i class="fa fa-comments" aria-hidden="true"></i>Coaching soon...</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comments" aria-hidden="true"></i>Coaching</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="coach_lp" target="_blank" rel="noopener">コーチング</a>
+            <a class="dropdown-item" href="myself_lp" target="_blank" rel="noopener">自己発掘コンテンツ</a>
+          </div>
         </li>
       </ul>
       <%

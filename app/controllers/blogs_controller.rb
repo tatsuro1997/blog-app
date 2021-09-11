@@ -70,7 +70,11 @@ class BlogsController < ApplicationController
     @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
     @blogs = @tag.blogs.all
-end
+  end
+
+  def coach_lp; end
+
+  def myself_lp; end
 
   private
 
