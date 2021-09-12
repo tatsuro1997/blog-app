@@ -87,8 +87,7 @@
 @media screen and (max-width: 425px) {
 	/* 425px以下に適用されるCSS（スマホ） */
   .container{
-    width: 380px;
-    text-align: center;
+    width: 100%;
     margin: 0 auto;
     .content-wrapper{
       width: 100%;
