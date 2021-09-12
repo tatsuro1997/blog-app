@@ -34,14 +34,15 @@
       }
     }
     .content-side{
+      text-align: center;
       .content-sidebar{
-      width: 200px;
+      width: 90%;
         .profile{
           margin-top: 50px;
           .profile-image{
             img{
-              width: 200px;
-              height: 200px;
+              width: 180px;
+              height: 180px;
               object-fit: cover;
               border-radius: 50%;
             }
@@ -78,6 +79,9 @@
   .margin-left{
     margin-left: 30%;
   }
+}
+
+@media screen and (max-width:920px){
 }
 
 @media screen and (max-width: 425px) {
