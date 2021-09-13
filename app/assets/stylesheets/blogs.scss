@@ -18,6 +18,8 @@
             .image-size{
               width: 500px;
               height: auto;
+              max-height: 350px;
+              object-fit: fill;
             }
           }
         }
