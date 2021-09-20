@@ -30,10 +30,12 @@
     </div>
     <div class="content-side">
       <div class="content-sidebar">
-        <% if current_user.admin?%>
-          <div class="new-post">
-            <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
-          </div>
+        <% if logged_in? %>
+          <% if current_user.admin?%>
+            <div class="new-post">
+              <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
+            </div>
+          <% end %>
         <% end %>
         <div class="profile">
           <div class="profile-image">
