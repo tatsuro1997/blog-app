@@ -69,8 +69,12 @@
       <div>
         <% if user_signed_in? %>
           <%= link_to 'ログアウト', '/logout', class: 'btn my-2 my-sm-0' %>
-        <% else %>
+        <%
+=begin%>
+ <% else %>
           <%= link_to 'サインイン', '/users/sign_in', class: 'btn my-2 my-sm-0' %>
+<%
+=end%>
         <% end %>
       </div>
     </div>

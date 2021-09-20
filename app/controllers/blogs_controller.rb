@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
-  before_action :guest_log_in, only: %i[ new edit create update destroy]
+  before_action :authenticate_user!, only: %i[ new create edit update destroy]
+  # before_action :guest_log_in, only: %i[ new edit create update destroy]
 
   # GET /blogs or /blogs.json
   def index
@@ -78,9 +78,9 @@ class BlogsController < ApplicationController
 
   private
 
-    def guest_log_in
-      redirect_to root_path if current_user.email == 'guest@example.com'
-    end
+    # def guest_log_in
+    #   redirect_to root_path if current_user.email == 'guest@example.com'
+    # end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
