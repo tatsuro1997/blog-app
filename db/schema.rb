@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_06_001231) do
+ActiveRecord::Schema.define(version: 2021_09_14_000048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,15 @@ ActiveRecord::Schema.define(version: 2021_09_06_001231) do
     t.index ["blog_id"], name: "index_images_on_blog_id"
   end
 
+  create_table "sns_credentials", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+  end
+
   create_table "tag_maps", force: :cascade do |t|
     t.bigint "blog_id", null: false
     t.bigint "tag_id", null: false
@@ -111,6 +120,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_001231) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -119,6 +129,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_001231) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "blogs"
   add_foreign_key "images", "blogs"
+  add_foreign_key "sns_credentials", "users"
   add_foreign_key "tag_maps", "blogs"
   add_foreign_key "tag_maps", "tags"
 end
