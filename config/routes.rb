@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root to: 'blogs#index'
 
-  devise_for :users, :controllers => {
-  :registrations => 'users/registrations',
-  :sessions => 'users/sessions'
-}
+  devise_for :users,
+  :controllers => {
+    sessions: 'users/sessions',
+    registrations: "users/registrations",
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
 
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"
