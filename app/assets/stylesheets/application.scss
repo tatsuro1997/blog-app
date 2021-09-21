@@ -10,72 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
-.nav-item{
-  a{
-    color: #4d4d4d!important;
-  }
-}
-
-.first-view-wrapper{
-  width: 1140px;
-  margin-top: 15px!important;
-  margin: 0 auto;
-  .first-view{
-    width: 1024px;
-    .first-view-image{
-      text-align: center;
-      img{
-        height: 300px;
-        width: 1024px;
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-	/* 768px以下に適用されるCSS（PC用） */
-  .first-view-wrapper{
-      width: 768px;
-
-    .first-view{
-      width: 700px;
-      .first-view-image{
-        text-align: center;
-        img{
-          height: 300px;
-          width: 700px;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-	/* 425px以下に適用されるCSS（スマホ） */
-  .first-view-wrapper{
-      width: 400px;
-
-    .first-view{
-      width: 380px;
-      .first-view-image{
-        text-align: center;
-        img{
-          height: 250px;
-          width: 380px;
-          object-fit: cover;
-        }
-      }
-    }
-  }
+.navbar-brand,
+.nav-link{
+  color: #4d4d4d!important;
 }
