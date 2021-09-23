@@ -1,0 +1,103 @@
+/* 全体 */
+* {
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+}
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+a.scroll {
+  color: white;
+}
+ul{
+  list-style: none;
+}
+.wrap {
+	overflow: hidden;
+}
+
+
+/* 共通 */
+.text-center{
+  text-align: center;
+}
+.flex-rr ,
+.flex-rc{
+  display: flex;
+  justify-content: space-between;
+}
+.bold{
+  font-weight: bold;
+}
+.back-box{
+  width: 100%;
+  height: 100%;
+  background-color: #1E73BD;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+}
+.po-re{
+  position: relative;
+}
+.un-d{
+  border-bottom: double 5px #1E73BD;
+}
+.disblo{
+  display: block;
+}
+.is-flex{
+  display: flex;
+}
+
+
+  /* hoverメニュー */
+.header-nav ul li ul{
+    display: none;
+}
+.header-nav ul li:hover ul{
+    display: block;
+}
+.hover-menu{
+  background-color: lightgray;
+  border: solid 2px gray;
+  text-align: center;
+  font-weight: bolder;
+}
+.hover-menu li{
+  border-bottom: solid 2px gray;
+}
+.hover-menu li:last-of-type{
+  border-bottom: none;
+}
+.header-nav ul li ul li:hover{
+  background-color:#f3f3f3;
+  border-bottom: solid 4px #627295;
+}
+.header-nav ul li ul li:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+.header-nav ul li ul li a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}

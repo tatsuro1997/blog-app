@@ -18,6 +18,8 @@
             .image-size{
               width: 500px;
               height: auto;
+              max-height: 350px;
+              object-fit: fill;
             }
           }
         }
@@ -34,16 +36,44 @@
       }
     }
     .content-side{
+      text-align: center;
       .content-sidebar{
-        width: 200px;
+      width: 90%;
+        .profile{
+          margin-top: 50px;
+          .profile-image{
+            img{
+              width: 180px;
+              height: 180px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+          .profile-text-blog{
+            text-align: center;
+            margin-top: 30px;
+          }
+          .profile-occupation{
+            text-align: center;
+            margin-top: 20px;
+          }
+          .profile-content{
+
+          }
+          .profile-hr{
+            width: 50px;
+          }
+        }
+        .tag-list{
+          margin-top: 30px;
+        }
       }
     }
   }
+}
 
-  .top-image-size{
-    width: 500px;
-    height: auto;
-  }
+.fa{
+  margin-right: 5px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -53,9 +83,47 @@
   }
 }
 
+@media screen and (max-width:920px){
+}
+
 @media screen and (max-width: 425px) {
 	/* 425px以下に適用されるCSS（スマホ） */
-  .margin-left{
-    margin-left: 30%;
+  .container{
+    width: 100%;
+    margin: 0 auto;
+    .content-wrapper{
+      width: 100%;
+      .content-main{
+        .content-blogs{
+          width: 100%;
+          flex-wrap: wrap;
+          display: flex;
+          margin-right: 30px;
+          .content-blog{
+            width: 100%;
+            height: auto;
+            .blog-top-image{
+              .image-size{
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          .blog-bottom{
+            .created-at{
+              font-size: 10px;
+            }
+            .blog-title{
+              height: 30px;
+              margin-bottom: 20px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-side{
+    display: none;
   }
 }

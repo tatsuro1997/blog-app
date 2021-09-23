@@ -1,5 +1,5 @@
+<%= stylesheet_link_tag 'rich_text', media: 'all', 'data-turbolinks-track': 'reload' %>
 <div class="container">
-
   <div class="card my-5">
     <div class="card-image mt-3 text-center">
       <% @blog.images.each do |image| %>
@@ -28,7 +28,7 @@
     </div>
    </div>
 
-  <% unless guest_user%>
+  <% if logged_in?%>
     <%= link_to 'Edit', edit_blog_path(@blog) %> |
     <%= link_to 'Back', blogs_path %> |
     <%= link_to 'Destroy', @blog, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -3,6 +3,13 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
+  <%
+=begin%>
+ <%= link_to 'Facebookログイン', user_facebook_omniauth_authorize_path, method: :post %>
+<%
+=end%>
+  <%= link_to 'Googleログイン', user_google_oauth2_omniauth_authorize_path, method: :post %>
+
   <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
 
   <div class="field">

@@ -30,9 +30,38 @@
     </div>
     <div class="content-side">
       <div class="content-sidebar">
-        <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
+        <% if logged_in? %>
+          <% if current_user.admin?%>
+            <div class="new-post">
+              <%= link_to '新規投稿', new_blog_path, class: 'btn btn-block btn-success btn-sm' %>
+            </div>
+          <% end %>
+        <% end %>
+        <div class="profile">
+          <div class="profile-image">
+            <%= image_tag "profile" %>
+          </div>
+          <div class="profile-text-blog">
+            <h5>たつろう</h5>
+          </div>
+          <div class="profile-occupation">
+            <p>コーチ / エンジニア</p>
+          </div>
+          <hr class="profile-hr">
+          <div class="profile-content">
+            <p>
+              テキスト<br>
+              テキスト<br>
+              テキスト<br>
+              テキスト<br>
+              テキスト<br>
+              テキスト<br>
+              テキスト<br>
+              テキスト
+            </p>
+          </div>
+        </div>
         <div class="tag-list">
-          <h3>タグリスト</h3>
           <% @tag_list.each do |list| %>
             <%= link_to list.tag_name, tag_blogs_path(tag_id: list.id) %>
             <%= "(#{list.blogs.count})" %>
