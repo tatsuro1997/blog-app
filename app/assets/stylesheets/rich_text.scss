@@ -3,6 +3,24 @@
     display: none;
   }
 }
+.card-title{
+    h1 {
+      font-weight: bold;
+      position: relative;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h1:before {
+      position: absolute;
+      bottom: 0px;
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 5px;
+      content: '';
+      background: #094;
+    }
+  }
 
 .text-right{
   margin-bottom: 30px;
