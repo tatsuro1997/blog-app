@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_000048) do
+ActiveRecord::Schema.define(version: 2021_10_04_004114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,14 +71,6 @@ ActiveRecord::Schema.define(version: 2021_09_14_000048) do
     t.index ["blog_id"], name: "index_comments_on_blog_id"
   end
 
-  create_table "images", force: :cascade do |t|
-    t.string "image_url"
-    t.bigint "blog_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["blog_id"], name: "index_images_on_blog_id"
-  end
-
   create_table "sns_credentials", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -128,7 +120,6 @@ ActiveRecord::Schema.define(version: 2021_09_14_000048) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "blogs"
-  add_foreign_key "images", "blogs"
   add_foreign_key "sns_credentials", "users"
   add_foreign_key "tag_maps", "blogs"
   add_foreign_key "tag_maps", "tags"

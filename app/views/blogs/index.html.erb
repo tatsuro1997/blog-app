@@ -9,10 +9,8 @@
         <% @blogs.sort.reverse.each do |blog| %>
           <div class="content-blog">
             <div class="blog-top-image">
-              <% if blog.images[0] %>
-                <%= link_to blog do %>
-                  <%= image_tag blog.images[0].image_url.url, class: 'image-size' %>
-                <% end %>
+              <%= link_to blog do %>
+                <%= image_tag blog.avatar, class: 'image-size' %>
               <% end %>
             </div>
             <div class="blog-bottom">

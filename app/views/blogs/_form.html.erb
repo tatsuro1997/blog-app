@@ -11,9 +11,7 @@
     </div>
   <% end %>
 
-  <%= f.fields_for :images do |i| %>
-    <%= i.file_field :image_url %>
-  <% end %>
+  <%= f.file_field :avatar %>
 
   <div class="field">
     <%= f.label :title %>

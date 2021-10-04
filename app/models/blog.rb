@@ -1,10 +1,8 @@
 class Blog < ApplicationRecord
   has_many :comments, dependent: :delete_all
-  has_many :images, dependent: :destroy
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps
-
-  accepts_nested_attributes_for :images
+  has_one_attached :avatar
 
   has_rich_text :content
 
