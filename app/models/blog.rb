@@ -3,6 +3,7 @@ class Blog < ApplicationRecord
   has_many :images, dependent: :destroy
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps
+  has_one_attached :avatar
 
   accepts_nested_attributes_for :images
 

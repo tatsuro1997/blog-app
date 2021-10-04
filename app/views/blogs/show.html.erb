@@ -5,6 +5,7 @@
       <% @blog.images.each do |image| %>
         <%= image_tag image.image_url.url, class: 'top-image-size' %>
       <% end %>
+      <%= image_tag @blog.avatar %>
     </div>
     <div class="card-body">
       <div class="card-title">
